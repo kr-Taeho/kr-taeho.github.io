@@ -4,39 +4,98 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'GilbeotRainbow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GilbeotRainbow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body { 
     font-family: 'default-font';
     font-size: 1.3em;
     color: #141518;
-    background-image: url('../images/background1_1920x1280.jpg');
-    background-repeat: repeat;
     text-align: center!important;
 }
-
-.label {
-    font-family: 'default-font';
+section {
     margin-top: 10%;
     margin-bottom: 10%;
 }
-.invitation-bg-color {
-    background-color: antiquewhite;
-    padding-top: 10%;
+.top-separator {
+    padding-top: 60px;
+    background-image: url("../images/leaf.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.visual-section {
+    background-image: url("../images/division_680x240.png");
+    background-size: calc(100% - 2.25rem);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 20%;
+}
+.visual-section .main-title {
+    color:hotpink;
+    font-family: 'GilbeotRainbow', Courier, monospace;
+    font-size: 3rem;
+    line-height: initial;
+}
+.visual-section p {
+    font-size: 1.3rem;
+}
+.visual-section img {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.visual-section div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.visual-section .big-name {
+    font-size: 1.8rem;
+    margin: 10px;
+}
+
+.greeting-section {
+    background-color: #FEFCEF;
+    padding-top: 20%;
     padding-bottom: 10%;
 }
-.invitation-bg-color > p {
-    font-weight: bold;
+.greeting-section .invation-image {
+    width: 60%;
 }
-.title_bar {
-    border-top: 1.5px solid #787878;
-    width: 0.875rem;
-    margin-left: auto;
-    margin-right: auto;
+.greeting-section .invation-text {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.margin-100 {
-    margin-top: 100px;
-    margin-bottom: 100px;
+.thanks-section img {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
-.footer {
-    height: 500px;
+
+.thanks-section .thanks-card::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    border: 1px solid #2f8994;
+    opacity: 0.8;
+}
+.thanks-section .thanks-card {
+    position: relative;
+    z-index: 10;
+    margin: 0 1rem 1rem;
+    margin-top: -4.375rem;
+    padding: 0.813em 0.813rem 3.438rem 0.813rem;
+    background: rgba(255, 255, 255, .8);
+}
+.thanks-section .thanks-card img {
+    
 }
