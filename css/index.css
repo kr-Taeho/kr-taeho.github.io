@@ -1,3 +1,12 @@
+@media (min-width: 720px) {
+    html, body {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+    html {
+        font-size: 32px !important;
+    }
+}
 @font-face {
     font-family: 'default-font';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
@@ -15,10 +24,8 @@ body {
     font-size: 1.3em;
     color: #141518;
     text-align: center!important;
-}
-section {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    background: url(../images/bg.png) 0 0 no-repeat;
+    background-size: 100% auto;
 }
 .top-separator {
     padding-top: 60px;
@@ -42,10 +49,31 @@ section {
 .visual-section p {
     font-size: 1.3rem;
 }
-.visual-section img {
-    width: 100%;
-    margin-top: 10%;
-    margin-bottom: 10%;
+.visual-section .vertical-item{
+	width:100%;
+}
+.visual-section .vertical-item.photo{
+	position:relative;
+	padding:2.188rem 2.250rem 0;
+}
+.visual-section .vertical-item.photo .box{
+	position:relative;
+	padding-bottom:133.334%;
+}
+.visual-section .vertical-item.photo .box:after{
+	content:'';
+	position:absolute;
+	left:-0.438rem; top:-0.438rem;
+	right:-0.438rem; bottom:-0.438rem;
+	display:block;
+	background:url("../images/photo_frame.png") center no-repeat;
+	background-size: 100% auto;
+}
+.visual-section .vertical-item.photo .box img{
+	position:absolute;
+	left:0; top:0;
+	width:100%;
+	height:100%;
 }
 .visual-section div {
     margin-top: 20px;
@@ -73,7 +101,6 @@ section {
 }
 .thanks-section img {
     width: 100%;
-    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -93,9 +120,174 @@ section {
     z-index: 10;
     margin: 0 1rem 1rem;
     margin-top: -4.375rem;
-    padding: 0.813em 0.813rem 3.438rem 0.813rem;
+    padding: 0.813em 0.813rem 0.813rem 0.813rem;
     background: rgba(255, 255, 255, .8);
 }
-.thanks-section .thanks-card img {
-    
+.thanks-card img {
+    width: 10%;
+}
+
+.slsbTel-section{
+	text-align:center;	
+}
+.slsbTel-section .tit{
+	font-size:1.1rem;
+	font-weight:400;
+	line-height:2.5rem;
+	text-align:center;
+	background:#eef8e9;
+    color: #6d8961;
+}
+.slsbTel-section .ib {
+    padding: 1.563rem 2.250rem 1.875rem;
+}
+.slsbTel-section .row{
+	margin-top:1.250rem;
+}
+.slsbTel-section .row:first-child{
+	margin-top:0;
+}
+.slsbTel-section .row:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.slsbTel-section .slsb-tit{
+	float:left;
+	font-size:0.875rem;
+	font-weight:400;
+	line-height:2.250rem;
+	color:#111;
+}
+.slsbTel-section .slsb-btn{
+	float:left;
+	margin-left:1.250rem;
+	font-size:0;
+	line-height:0;
+}
+.com-btn{
+	display:inline-block; 
+	vertical-align:top; 
+	margin-left:1rem;
+	width:2.250rem;
+	height:2.250rem;
+	font-size:0;
+	line-height:0;
+	border:1px solid transparent;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	border-radius:50%;
+	box-sizing:border-box;
+}
+.com-btn:first-child{margin-left:0;}
+.com-btn.tel{
+	background-image:url("../images/icon_tel.png");
+	background-size:1rem auto;
+}
+.com-btn.sms{
+	background-image:url("../images/icon_sms.png");
+	background-size:1rem auto;
+}
+.com-btn.acc{
+	width: 11.25rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    font-size: 0.813rem;
+    line-height: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.honjuTel-section .con{
+	padding:1.563rem 2.250rem 1.875rem;
+	text-align:center;
+}
+.honjuTel-section .con:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.honjuTel-section .con .col{
+	float:left;
+	width:50%;
+}
+.honjuTel-section .honju-tit{
+	margin-bottom:0.925rem;
+	font-size:0.750rem;
+	font-weight:400;
+	line-height:1.250rem;
+	color:#111;
+}
+.honjuTel-section .box{
+	margin:0 -0.925rem;
+	padding:0 0.625rem;
+	margin-top:0.938rem;
+}
+.honjuTel-section .box.first,
+.honjuTel-section .honju-tit + .box{
+	margin-top:0;
+}
+.honjuTel-section .box .name{
+	margin-bottom:0.438rem;
+}
+.honjuTel-section .box .name span{
+	font-size:0.688rem;
+	font-weight:400;
+	line-height:1.250rem;
+	color:#999;
+}
+.honjuTel-section .box .name strong{
+	font-size:0.875rem;
+	font-weight:400;
+	color:#111;
+	line-height:1.250rem;
+	white-space:pre-wrap;
+}
+.honjuTel-section .box .honju-btn{
+	font-size:0;
+	line-height:0;
+}
+.honjuTel-section .tit{
+	font-size:1.1rem;
+	font-weight:400;
+	line-height:2.5rem;
+	text-align:center;
+	background:#eef8e9;
+    color: #6d8961;
+}
+.honjuTel-section .box .honju-btn{
+	font-size:0;
+	line-height:0;
+}
+.com-btn:first-child{margin-left:0;}
+.com-btn.tel{
+	background-image:url("../images/icon_tel.png");
+	background-size:1rem auto;
+}
+.com-btn.sms{
+	background-image:url("../images/icon_sms.png");
+	background-size:1rem auto;
+}
+.com-btn.acc{
+	width: 11.25rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    font-size: 0.813rem;
+    line-height: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.com-btn.tel.sl{
+	background-color:#85b791;
+}
+.com-btn.tel.sb{
+	background-color:#f7b7b5;
+}
+.com-btn.acc.sl{
+	background-color:#85b791;
+}
+.com-btn.acc.sb{
+	background-color:#f7b7b5;
+}
+.com-btn.sms{
+	background-color:#ddd;
 }
