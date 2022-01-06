@@ -88,10 +88,20 @@ body {
 .greeting-section .invation-image {
     width: 60%;
 }
-.greeting-section .invation-text {
+.greeting-section .invation-other-text {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+.greeting-section .invation-left-box {
+	display: flex;
+  	justify-content: center;
+}
+.greeting-section .invation-left-text {
+	text-align: left;
+}
+.greeting-section .invation-center-text {
+    text-align: center;
 }
 .thanks-section img {
     width: 100%;
