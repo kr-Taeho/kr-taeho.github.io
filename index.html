@@ -10,7 +10,13 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"><!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-<link href="./css/index.css" rel="stylesheet" />
+<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script> 
+<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+<link href="./css/style.css" rel="stylesheet" />
+<link href="./css/lightSlider.css" rel="stylesheet" />
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/lightSlider.js"></script>
+
 </head>
 <body>
   <div>
@@ -18,10 +24,6 @@
       <div class="music"></div>
       <!-- 메인 비주얼 시작 ##### -->
       <section class="visual-section">
-        <diV>
-          <span class="main-title">WEDDING</span>
-          <p>THANK YOU</p>
-        </diV>
         <div class="vertical-top">
 					<div class="vertical-item photo">
 						<div class="box"><img src="./images/photo3_576x768.png" alt="" /></div>
@@ -43,15 +45,11 @@
         </div>
         <div>
           <p class="invation-text">
-            우연히 인연이 되어<br />
-            태호와 지안이는<br />
-            앞으로의 날들을<br />
-            함께 하기로 약속합니다.<br />
-            <br />
-            하루 하루,<br />
-            여행처럼 설레고 특별한 일상을 만들며,<br />
-            평생을 손잡고 함께하는<br />
-            동반자가 되겠습니다.<br />
+            <b>태</b>양처럼 따스한 사랑을 나누어 주고<br />
+            <b>호</b>수처럼 넓은 마음으로 품어 주었던<br />
+            우리 두 사람. 수많은 계절이<br />
+            <b>지</b>나더라도 서로를 아껴주며 포근한<br />
+            <b>안</b>식처가 되어 줄 것을 약속하겠습니다.<br />
             <br />
             감사한 분들을 모시고<br />
             기쁨을 나누는 것이 도리지만,<br />
@@ -59,7 +57,7 @@
             간소하게 서약을 맺고자 합니다.<br />
             너그러운 마음으로 먼 곳에서라도<br />
             축하와 격려를 해주시면<br />
-            늘 기억하며 행복하개 살겠습니다.<br />
+            늘 기억하며 행복하게 살겠습니다.<br />
           </p>
           <i class="bi bi-dash-lg"></i>
           <p class="invation-text">
@@ -101,7 +99,126 @@
       <!-- 달력 끝 &&&&& -->
 
       <!-- 갤러리 시작 ##### -->
-      <section class="gallery-section"></section>
+      <section class="gallery-section">
+        <div>
+          <img class="gallery-image" src="images/gallery_480x80.png" />
+        </div>
+        <div class="contain">
+          <div class="lSSlideWrapper usingCss">
+            <ul id="image-gallery" class="gallery list-unstyled roll_type01 lightSlider lSSlide">
+              <li data-thumb="images/sample_images_01.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_01.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_02.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_02.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_03.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_03.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_04.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_04.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_05.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_05.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_06.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_06.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_07.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_07.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_08.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_08.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_09.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_09.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_10.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_10.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_11.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_11.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li data-thumb="images/sample_images_12.png" onclick="galleryPOP('open', 'type1');">
+                <div class="box">
+                  <div class="pos">
+                    <div class="cen">
+                      <img src="images/sample_images_12.png" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+					<p class="ex">이미지를 클릭하시면 확대보기가 가능합니다.</p>
+				</div>
+      </section>
       <!-- 갤러리 끝 &&&&& -->
 
       <!-- 마음전달 시작 ##### -->
@@ -144,8 +261,6 @@
 							</div>
 						</div>
 						<div class="box">
-							
-              
 						</div>
 					</div>
 					<div class="col">
@@ -173,5 +288,186 @@
   <!-- 푸터 시작 ##### -->
   <footer id="footer"></footer>
   <!-- 푸터 끝 &&&&& -->
+
+  <div class="gallery-pop-wrap">
+		<div class="pop-header">
+			<div class="tit">갤러리</div>
+		</div>
+		<div class="pop-body">
+			<ul id="pop-gallery" class="gallery list-unstyled cS-hidden roll_type01">
+				<li data-thumb="images/sample_images_01.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_01.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_02.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_02.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_03.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_03.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_04.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_04.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_05.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_05.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_06.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_06.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_07.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_07.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_08.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_08.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_09.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_09.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_10.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_10.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_11.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_11.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+				<li data-thumb="images/sample_images_12.png">
+					<div class="box">
+						<div class="pos">
+							<div class="cen">
+								<img src="images/sample_images_12.png" />
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<button href="javascript:pcAlert();" class="close-btn" onclick="galleryPOP('close', 'type1')">닫기</button>
+	</div>
 </body>
+
+<script>
+  function music_player(){   
+    if ($('#m_off').text()=='stop'){
+      bgmStart('/music/bgm1.mp3');
+      $('#m_off').text('start');
+      document.getElementById('m_on').src="/mobile/new_m/mcard/images/common/music_01_on.png" 
+    }else{
+      bgmStop();
+      $('#m_off').text('stop')
+      document.getElementById('m_on').src="/mobile/new_m/mcard/images/common/music_01_off.png" 
+    }
+  }
+
+  function bgmStart(link){
+    if ( window.HTMLAudioElement ) {			
+      audio = $('audio');		
+      audio[0].src = link;			
+      audio[0].load();
+      audio[0].play();
+      //alert("audio");
+    }else{							
+      //ie_player.setBGM(link);
+      //alert(ie_player.src);
+      setTimeout("ie_player.bgmPlay()", 100);	
+      //alert("ifrm");
+    }
+  }
+
+  function bgmStop(){
+    if ( window.HTMLAudioElement ) {
+      audio = $('audio');			
+      audio[0].pause();		
+    }else{
+      ie_player.bgmStop();			
+    }
+  }
+
+  // BGM
+  //music_player();
+
+  // 포토갤러리
+  imageGallery();
+
+  // 팝업갤러리
+  popGallery();
+
+  function jsCopyLink(copyText, id) {            
+    var tmpTextarea = document.createElement('textarea');
+    tmpTextarea.value = copyText;
+   
+    document.body.appendChild(tmpTextarea);
+    tmpTextarea.select();
+    tmpTextarea.setSelectionRange(0, 9999);  // 셀렉트 범위 설정
+   
+    document.execCommand('copy');
+    document.body.removeChild(tmpTextarea);
+    popClose(id);
+    popOpen('0 1rem','copyComplete');			
+    //alert("URL 복사가 완료되었습니다."); 					  
+  }
+</script>
 </html>
