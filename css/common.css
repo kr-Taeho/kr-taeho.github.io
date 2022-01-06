@@ -100,6 +100,12 @@ body {
 .greeting-section .invation-left-text {
 	text-align: left;
 }
+.greeting-section .invation-left-text b {
+	font-size: 1.7rem;
+}
+.greeting-section .invation-left-text p {
+	line-height: 1.7rem;
+}
 .greeting-section .invation-center-text {
     text-align: center;
 }
