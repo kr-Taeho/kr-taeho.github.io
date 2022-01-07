@@ -26,7 +26,7 @@ function kakaoInit(){
 	Kakao.init('7462c1719a1f29d609428d178740a73a');
 }
 function flowerEffect(){
-	$('body').sakura();
+	//꽃날리는 애니메이션을 넣을 예정..
 }
 
 function scrollFixed() { // 스크롤 Fixed
