@@ -176,20 +176,16 @@ function galleryType1(toggle){ // 슬라이드형 갤러리
 
 function phoneCall(number) {
 	var user = navigator.userAgent;
-	if(user.indexOf("Android") > -1){
-		document.location.href = 'tel:number';
-	} else if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1){
-		document.location.href = 'tel:number';
+	if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1 || user.indexOf("Android") > -1){
+		document.location.href = 'tel:'+number;
 	} else {
 		alert('PC 환경에서는 사용할 수 없습니다.');
 	}
 }
 function phoneSMS(number) {
 	var user = navigator.userAgent;
-	if(user.indexOf("Android") > -1){
-		document.location.href = 'sms:number';
-	} else if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1){
-		document.location.href = 'sms:number';
+	if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1|| user.indexOf("Android") > -1){
+		document.location.href = 'sms:'+number;
 	} else {
 		alert('PC 환경에서는 사용할 수 없습니다.');
 	}
