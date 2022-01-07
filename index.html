@@ -12,17 +12,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script> 
 <script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+<!-- kakao sdk 호출 -->
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <link href="./css/style.css" rel="stylesheet" />
 <link href="./css/lightSlider.css" rel="stylesheet" />
 <script type="text/javascript" src="./js/common.js"></script>
 <script type="text/javascript" src="./js/lightSlider.js"></script>
 <script type="text/javascript" src="./js/anim.js"></script>
-
 </head>
 <body>
   <div>
     <section id="content">
-      <div class="music"></div>
+      <div class="music">
+				<a href="javascript:music_player()">
+					<div>
+						<img id="m_on" src="./images/music_01_off.png" tppabs="./images/music_01_on.png" />
+						<p style="display:none;" id="m_off">stop</p>
+					</div>
+				</a>
+				<audio id="audio" preload="none" loop="loop" src="./sounds/bgm.mp3"></audio>
+				<iframe id="ie_player" src="./sounds/bgm.mp3" width="0" height="0"></iframe>
+			</div>
       <!-- 메인 비주얼 시작 ##### -->
       <section class="visual-section">
         <div class="vertical-top">
@@ -314,7 +324,25 @@
     </section>
   </div>
   <!-- 푸터 시작 ##### -->
-  <footer id="footer"></footer>
+  <footer id="footer">
+    <div class="foot-share">
+      <ul class="foot-share-list">
+          <li>
+              <a href="javascript:kakaoShare();" class="kakao">
+                  카카오톡<br> 공유하기
+              </a>
+          </li>
+          <li>
+              <a href="javascript:facebookShare();" class="facebook">
+                  페이스북<br> 공유하기
+              </a>
+          </li>
+      </ul>
+    </div>
+    <div class="foot-logo">
+        <p>Made by Taeho, Jian</p>
+    </div>
+  </footer>
   <!-- 푸터 끝 &&&&& -->
 
   <div class="gallery-pop-wrap">
@@ -554,13 +582,13 @@
 <script>
   function music_player(){   
     if ($('#m_off').text()=='stop'){
-      bgmStart('/music/bgm1.mp3');
+      bgmStart('./sounds/bgm.mp3');
       $('#m_off').text('start');
-      document.getElementById('m_on').src="/mobile/new_m/mcard/images/common/music_01_on.png" 
+      document.getElementById('m_on').src="./images/music_01_on.png" 
     }else{
       bgmStop();
       $('#m_off').text('stop')
-      document.getElementById('m_on').src="/mobile/new_m/mcard/images/common/music_01_off.png" 
+      document.getElementById('m_on').src="./images/music_01_off.png" 
     }
   }
 

@@ -190,3 +190,31 @@ function phoneSMS(number) {
 		alert('PC 환경에서는 사용할 수 없습니다.');
 	}
 }
+function kakaoShare(){
+	Kakao.Link.sendDefault({
+		objectType: 'feed',
+		content: {
+		  title: '태호 ♥ 지안 결혼합니다.',
+		  description: '#태호 #지안 #결혼 #행복 #감사',
+		  imageUrl: 'https://kr-taeho.github.io/images/photo3_576x768.png',
+		  link: {
+			mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
+			webUrl: '카카오공유하기 시 클릭 후 이동 경로',
+		  },
+		},
+		buttons: [
+		  {
+			title: '웹으로 보기',
+			link: {
+			  mobileWebUrl: 'https://kr-taeho.github.io/',
+			  webUrl: 'https://kr-taeho.github.io/',
+			},
+		  },
+		],
+		// 카카오톡 미설치 시 카카오톡 설치 경로이동
+		installTalk: true,
+	  })
+}
+function facebookShare(){
+
+}

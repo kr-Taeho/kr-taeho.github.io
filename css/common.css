@@ -58,6 +58,21 @@ body {
 .tb{display:table; width:100%;}
 .ib{display:inline-block; vertical-align:top;}
 
+
+.music{
+	z-index:100;
+	position: fixed;
+	right:1rem; top:1rem;
+	transition:all .3s ease;
+}
+.music img{
+	display:block;
+	width:1.5rem;
+}
+.music iframe{
+	display:none;
+}
+
 .top-separator {
     padding-top: 60px;
     background-image: url("../images/leaf.png");
@@ -634,7 +649,7 @@ body {
 
 .account-section .sec-txt {
 	margin-bottom:3.125rem;
-	font-size:1.250rem;
+	font-size:1rem;
 	font-weight:300;
 	line-height:1rem;
 	text-align:center;
@@ -723,4 +738,68 @@ body {
 }
 .com-btn.sms{
 	background-color:#ddd;
+}
+
+.foot-share{
+	padding:1.875rem 0 1.563rem;
+	background:#333;
+	border-bottom:1px solid #222;
+	text-align: center;
+}
+.foot-share ul{
+	font-size:0;
+	line-height:0;
+}
+.foot-share li{
+	display:inline-block;
+	vertical-align:top;
+	width:3.125rem;
+	padding:0 0.938rem;
+	box-sizing:content-box;
+}
+.foot-share a{
+	position:relative;
+	display:block;
+	padding-top:3.563rem;
+	font-family:"Noto Sans KR";
+	font-size:0.688rem;
+	font-weight:300;
+	line-height:0.875rem;
+	text-align:center;
+	color:#aaa;
+	text-decoration:none;
+}
+.foot-share a:after{
+	content:'';
+	display:block;
+	position: absolute;
+	left: 50%; top: 0;
+	margin-left:-1.563rem;
+	width:3.125rem;
+	height:3.125rem;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	background-size:3.125rem;
+}
+.foot-share .kakao:after{
+	background-image:url("../images/footer_kakao.png");
+}
+.foot-share .facebook:after{
+	background-image:url("../images/footer_facebook.png");
+}
+.foot-logo{
+	background:#333;
+	padding-top: 3%;
+}
+.foot-logo p {
+	color:#aaa;
+	text-decoration:none;
+	font-size: 1rem;
+}
+.foot-logo:after{
+	content:'';
+	display:block;
+	width:3.469rem;
+	height:0.906rem;
+	margin:0 auto;
 }
