@@ -116,31 +116,31 @@ body {
     padding-top: 10%;
     padding-bottom: 10%;
 }
-.greeting-section .invation-image {
+.greeting-section .invitation-image {
     width: 60%;
 }
-.greeting-section .invation-other-text {
+.greeting-section .invitation-other-text {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
 }
-.greeting-section .invation-left-box {
+.greeting-section .invitation-left-box {
 	display: flex;
   	justify-content: center;
 }
-.greeting-section .invation-left-text {
+.greeting-section .invitation-left-text {
 	text-align: left;
 }
-.greeting-section .invation-left-text .invation-bold-option {
+.greeting-section .invitation-left-text .invitation-bold-option {
 	margin-left: 4%;
 }
-.greeting-section .invation-left-text b {
+.greeting-section .invitation-left-text b {
 	font-size: 1.6rem;
 }
-.greeting-section .invation-left-text p {
+.greeting-section .invitation-left-text p {
 	line-height: 1.6rem;
 }
-.greeting-section .invation-center-text {
+.greeting-section .invitation-center-text {
     text-align: center;
 	margin-top: 2%;
 }
