@@ -179,7 +179,7 @@ function phoneCall(number) {
 	if(user.indexOf("Android") > -1){
 		document.location.href = 'tel:number';
 	} else if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1){
-
+		document.location.href = 'tel:number';
 	} else {
 		alert('PC 환경에서는 사용할 수 없습니다.');
 	}
@@ -189,7 +189,7 @@ function phoneSMS(number) {
 	if(user.indexOf("Android") > -1){
 		document.location.href = 'sms:number';
 	} else if(user.indexOf("iPhone") > -1 || user.indexOf("iPad") > -1){
-
+		document.location.href = 'sms:number';
 	} else {
 		alert('PC 환경에서는 사용할 수 없습니다.');
 	}
