@@ -27,6 +27,37 @@ body {
     background: url(../images/bg.png) 0 0 no-repeat;
     background-size: 100% auto;
 }
+
+#menu-overlay{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:.7; z-index:998;}
+
+/* popup */
+.pop-wrap{display:none; z-index:1003; position:fixed; justify-content: center; top:50%; width:100%; box-sizing:border-box;max-width: 720px;}
+.pop-inner{position:relative; box-shadow:0 8px 8px rgba(0, 0, 0, .2);}
+.pop-head{position:relative; background:#fff;}
+.pop-body{position:relative; background:#fff; padding:1.875rem 0;}
+
+.accountCopy .pop-head{font-size:1.325rem; font-weight:400; line-height:4.125rem;text-align:center; color:#111; border-bottom:1px solid #5b1eaa;}
+.accountCopy .pop-body{padding:0 0 2.5rem;}
+.accountCopy .form .group{padding:0 2rem;}
+.accountCopy .form .group.col-2{padding: 2.5rem 2.5rem 0.625rem;width: auto;}
+.accountCopy .form .group.col-2 > div:first-child {float: left;font-size:1.075rem;}
+.accountCopy .form .group.col-2 > div:last-child {float: right;;font-size:1.075rem;}
+.accountCopy .form .group.col-2 > div > span {font-size:1.075rem;color:#666;}
+.accountCopy .form .group:after {content: '';display: block;clear: both;}
+.accountCopy .form .input{font-size: 1.275rem;width: 77%;height: 2.5rem;border: 1px solid #eee;background: #f9f9f9;padding-left: 0.875rem;}
+.accountCopy .form .btn{background: #5b1eaa;color: #fff;height: 2.5rem;width: 3.75rem;font-size: 0.813rem;border-radius:0;}
+.accountCopy .close-btn{position:absolute; right:0; top:0; display:block; width:3.375rem; height:4.125rem; background:url("../images/message_delete_02.png") 50% 50% no-repeat; background-size:0.875rem; font-size:0; line-height:0;}
+
+.copyComplete .pop-body{padding:0 0 2.5rem;}
+.copyComplete .form .group{padding:2.5rem 2rem;text-align:center;}
+.copyComplete .form .group .tit{padding:0 2rem 0.5rem;font-size: 1.325rem;color:#111;}
+.copyComplete .form .group .bkinfo{padding:0 2rem;line-height:1.1;}
+.copyComplete .form .group .bkinfo span {font-size: 1.075rem;color:#666;}
+.copyComplete .buttons .btn{display:block; float:left; width:100%; background:#fff; font-size:1.3rem; font-weight:400; line-height:3.125rem; text-align:center; color:#111; border-top:1px solid #eee; border-left:1px solid #eee;text-decoration:none;}
+
+.tb{display:table; width:100%;}
+.ib{display:inline-block; vertical-align:top;}
+
 .top-separator {
     padding-top: 60px;
     background-image: url("../images/leaf.png");
@@ -77,7 +108,7 @@ body {
     margin-bottom: 20px;
 }
 .visual-section .big-name {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 10px;
 }
 
@@ -92,6 +123,7 @@ body {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+	font-size: 1.1rem;
 }
 .greeting-section .invation-left-box {
 	display: flex;
@@ -99,16 +131,120 @@ body {
 }
 .greeting-section .invation-left-text {
 	text-align: left;
+	padding-left: 5%;
 }
 .greeting-section .invation-left-text b {
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 }
 .greeting-section .invation-left-text p {
-	line-height: 1.7rem;
+	line-height: 1.6rem;
 }
 .greeting-section .invation-center-text {
     text-align: center;
+	margin-top: 2%;
 }
+
+.calendar-section{
+	padding:1.250rem 1rem;
+	background-color:#f4f4f4;
+}
+.calendar-wrap{
+	position:relative;
+}
+.calendar-wrap .day-time{
+	position:absolute;
+	right:1.563rem;
+	top:0.813rem;
+	white-space:nowrap;
+}
+.calendar-wrap .day-time span{
+	font-family:"campton";
+	font-size:0.875rem;
+	line-height:2.5rem;
+	color:#111;
+}
+.calendar-wrap .day-time .day{}
+.calendar-wrap .day-time .time{}
+#calendar{
+	background:#fff;
+	border-radius:10px;
+	padding-bottom:0.938rem;
+}
+.ui-datepicker-calendar thead,
+.ui-datepicker-year,
+.ui-datepicker-prev,
+.ui-datepicker-next{
+	display:none;
+}
+
+.ui-datepicker{
+	padding:0 1.250rem;
+}
+.ui-datepicker-header{
+	margin:0 -1.250rem 0.938rem;
+}
+.ui-datepicker-title{
+	padding:0.625rem 1.563rem 0;
+	border-bottom:1px solid #eee;
+	text-align: left;
+}
+.ui-datepicker-month{
+	font-family:"campton";
+	font-size:1.5rem;
+	line-height:2.5rem;
+}
+.ui-datepicker-month strong{
+	font-family:"campton";
+	font-size:2rem;
+	font-weight:bold;
+}
+.ui-datepicker-calendar{
+	text-align:center;
+	table-layout:fixed;
+}
+.ui-datepicker-calendar tbody td{
+	padding:0.344rem;
+	font-size:0;
+	line-height:0;
+	pointer-events:none;
+}
+.ui-datepicker-calendar tbody td span,
+.ui-datepicker-calendar tbody td a{
+	display:block;
+	margin:0 auto;
+	width:2.1rem;
+	height:2.1rem;
+	text-decoration:none;
+	font-family:"campton";
+	font-size:1.025rem;
+	line-height:1.875rem;
+	color:#777;
+	border:1px solid transparent;
+	border-radius:50%;
+}
+.ui-datepicker-calendar tbody td.ui-datepicker-week-end:first-child span,
+.ui-datepicker-calendar tbody td.ui-datepicker-week-end:first-child a{
+	color:#ff6666;
+}
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day span,
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day a{
+	border-color:#000;
+	background-color:#000;
+	color:#fff !important;
+}
+
+.calendar-section{
+	background:#eef8e9;
+}
+.ui-datepicker-title{
+	color:#85b791;
+}
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day span,
+.ui-datepicker-calendar tbody td.ui-datepicker-current-day a{
+	background-color:#85b791;
+	border-color:#85b791;
+}
+
 .thanks-section img {
     width: 100%;
     margin-bottom: 10%;
@@ -421,7 +557,7 @@ body {
 }
 .honjuTel-section .honju-tit{
 	margin-bottom:0.925rem;
-	font-size:0.750rem;
+	font-size:1.150rem;
 	font-weight:400;
 	line-height:1.250rem;
 	color:#111;
@@ -439,7 +575,7 @@ body {
 	margin-bottom:0.438rem;
 }
 .honjuTel-section .box .name span{
-	font-size:0.688rem;
+	font-size:0.988rem;
 	font-weight:400;
 	line-height:1.250rem;
 	color:#999;
@@ -467,6 +603,94 @@ body {
 	font-size:0;
 	line-height:0;
 }
+
+.account-section{
+	padding:3.125rem 0;
+	text-align: center;
+}
+
+.account-section .sec-tit{
+	margin:0 auto 2.5rem;
+	width:9rem;
+	height:9rem;
+	font-size:1.350rem;
+	font-weight:300;
+	line-height:9rem;
+	text-align:center;
+	color:#fff;
+	background:#5eb984;
+	border:1px solid #5eb984;
+	border-radius:50%;
+}
+
+.account-section .sec-txt {
+	margin-bottom:3.125rem;
+	font-size:1.250rem;
+	font-weight:300;
+	line-height:1rem;
+	text-align:center;
+	color:#777;
+}
+
+.account-section .row{
+	margin-top:1.25rem;
+}
+.account-section .row:first-child{
+	margin-top:0;
+}
+
+.account-section .row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.account-section .slsb-tit{
+	float:left;
+	font-size:1.075rem;
+	font-weight:400;
+	line-height:2.50rem;
+	color:#111;
+	width: auto;
+}
+
+.account-section .slsb-btn {
+    float: left;
+    margin-left: 1.250rem;   
+	width: auto;
+}
+.com-btn{
+	display:inline-block; 
+	vertical-align:top; 
+	margin-left:1rem;
+	width:2.250rem;
+	height:2.250rem;
+	font-size:0;
+	line-height:0;
+	border:1px solid transparent;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	border-radius:50%;
+	box-sizing:border-box;
+}
+.com-btn:first-child{margin-left:0;}
+.com-btn.tel{
+	background-image:url("/mobile/new_m/mcard/images/common/icon_tel.png");
+	background-size:1rem auto;
+}
+.com-btn.sms{
+	background-image:url("/mobile/new_m/mcard/images/common/icon_sms.png");
+	background-size:1rem auto;
+}
+.com-btn.acc{
+	width: 11.25rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    font-size: 1.213rem;
+    line-height: 2.5rem;
+    color: #fff;
+    text-decoration: none;
+}
 .com-btn:first-child{margin-left:0;}
 .com-btn.tel{
 	background-image:url("../images/icon_tel.png");
@@ -475,15 +699,6 @@ body {
 .com-btn.sms{
 	background-image:url("../images/icon_sms.png");
 	background-size:1rem auto;
-}
-.com-btn.acc{
-	width: 11.25rem;
-    height: 2.5rem;
-    border-radius: 2.5rem;
-    font-size: 0.813rem;
-    line-height: 2.5rem;
-    color: #fff;
-    text-decoration: none;
 }
 .com-btn.tel.sl{
 	background-color:#85b791;
