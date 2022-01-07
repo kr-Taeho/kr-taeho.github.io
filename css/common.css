@@ -130,7 +130,6 @@ body {
 }
 .greeting-section .invation-left-text {
 	text-align: left;
-	padding-left: 5%;
 }
 .greeting-section .invation-left-text b {
 	font-size: 1.6rem;
@@ -243,7 +242,13 @@ body {
 	background-color:#85b791;
 	border-color:#85b791;
 }
-
+.thanks-section {
+	background: url('../images/photo5_800x1200.png') center no-repeat;
+	background-size: 100%;
+    padding: 20px;
+	width: 100%;
+	height: 100%;
+}
 .thanks-section img {
     width: 100%;
     margin-bottom: 10%;
@@ -263,9 +268,8 @@ body {
 .thanks-section .thanks-card {
     position: relative;
     z-index: 10;
-    margin: 0 1rem 1rem;
-    margin-top: -30%;
-    padding: 0.813em 0.813rem 0.813rem 0.813rem;
+    
+    padding: 0.813em;
     background: rgba(255, 255, 255, .8);
 }
 .thanks-card img {
