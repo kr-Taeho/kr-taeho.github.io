@@ -22,6 +22,13 @@ $(window).on('load', function(){
 	$(".visual-section.h-100").css("height", h);
 });
 
+function kakaoInit(){
+	Kakao.init('7462c1719a1f29d609428d178740a73a');
+}
+function flowerEffect(){
+	$('body').sakura();
+}
+
 function scrollFixed() { // 스크롤 Fixed
 	var isTablet = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone)/);
 	var ovY;
