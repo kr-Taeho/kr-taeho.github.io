@@ -131,6 +131,9 @@ body {
 .greeting-section .invation-left-text {
 	text-align: left;
 }
+.greeting-section .invation-left-text .invation-bold-option {
+	margin-left: 4%;
+}
 .greeting-section .invation-left-text b {
 	font-size: 1.6rem;
 }
