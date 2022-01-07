@@ -272,6 +272,9 @@ body {
 .thanks-card img {
     width: 10%;
 }
+.thanks-card p{
+	font-size: 1.150rem;
+}
 .gallery-section{
 	padding:3.125rem 0;
 }
