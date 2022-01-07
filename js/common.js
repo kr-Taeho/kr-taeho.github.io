@@ -216,5 +216,6 @@ function kakaoShare(){
 	  })
 }
 function facebookShare(){
-
+	var sendUrl = "kr-Taeho.github.io/"; // 전달할 URL
+    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
