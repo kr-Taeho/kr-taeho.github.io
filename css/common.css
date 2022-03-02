@@ -298,13 +298,14 @@ body {
 }
 .gallery-section{
 	padding:3.125rem 0;
+	background-color: #f7f8f9;
 }
 .gallery-section .gallery-image {
     width: 60%;
 	margin-bottom: 60px;
 }
 .gallery-section .ex{
-	margin-top:1.125rem;
+	margin-bottom:1.125rem;
 	font-size:0.750rem;
 	font-weight:400;
 	line-height:1;
@@ -495,6 +496,9 @@ body {
 	background-repeat:no-repeat;
 	background-size:cover;
 	border-radius:50%;
+}
+grid-gallery-section{
+	background-color: #f7f8f9;
 }
 .slsbTel-section{
 	text-align:center;	
