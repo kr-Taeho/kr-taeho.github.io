@@ -15,15 +15,15 @@ var galleryPhotos1 = [
 ];
 
 var galleryPhotos2 = [
-	"images/sample_images_01.png",
-	"images/sample_images_02.png",
-	"images/sample_images_03.png",
-	"images/sample_images_04.png",
-	"images/sample_images_05.png",
-	"images/sample_images_06.png",
-	"images/sample_images_07.png",
-	"images/sample_images_08.png",
-	"images/sample_images_09.png"
+	"images/photos/03.jpg",
+	"images/photos/06.jpg",
+	"images/photos/07.jpg",
+	"images/photos/09.jpg",
+	"images/photos/14.jpg",
+	"images/photos/15.jpg",
+	"images/photos/17.jpg",
+	"images/photos/19.jpg",
+	"images/photos/20.jpg"
 ]
 
 $(document).on("ready", function(){
@@ -40,6 +40,18 @@ $(document).on("ready", function(){
             $(this).removeClass("pop-on").removeAttr("data-pop-id").removeData().fadeOut(100);
             $("#"+id+"").removeClass("pop-on").fadeOut(100);
         }
+	});
+
+	$("#gallery-square .item").click(function (el){
+		var src = el.currentTarget.children[1].getAttribute("src");
+		console.log(src);
+		var index = galleryPhotos2.indexOf(src);
+		var imageItems = $('#gallery-carousel .carousel-inner').children()
+		for(var i = 0;i < imageItems.length;i++){
+			$(imageItems[i]).removeClass('active');
+		}
+		$(imageItems[index]).addClass('active');
+		popOpen('0','gallery-modal');
 	});
 });
 
@@ -143,24 +155,32 @@ function dataPicker(data) { // 달력 출력
 var imgGallerySlider;
 var popGallerySlider;
 function imageGallery() { // 포토갤러리
-	for(var i = 0; i < galleryPhotos1.length; i++){
-		$('#image-gallery').append(
-			"<li data-thumb=\""+galleryPhotos1[i]+"\" onclick=\"galleryPOP('open', 'type1');\">" 
-					+"<div class=\"box\">"
-					  +"<div class=\"pos\">"
-						+"<div class=\"cen\">"
-						  +"<img src=\""+galleryPhotos1[i]+"\" />"
-						+"</div>"
-					  +"</div>"
-					+"</div>"
-				  +"</li>"
-			);
-	}
+	// for(var i = 0; i < galleryPhotos1.length; i++){
+	// 	$('#image-gallery').append(
+	// 		"<li data-thumb=\""+galleryPhotos1[i]+"\" onclick=\"galleryPOP('open', 'type1');\">" 
+	// 				+"<div class=\"box\">"
+	// 				  +"<div class=\"pos\">"
+	// 					+"<div class=\"cen\">"
+	// 					  +"<img src=\""+galleryPhotos1[i]+"\" />"
+	// 					+"</div>"
+	// 				  +"</div>"
+	// 				+"</div>"
+	// 			  +"</li>"
+	// 		);
+	// }
 	
 	for(var i = 0; i < galleryPhotos2.length; i++){
-		$('#grid-gallery').append(
-			"<figure><a href=\"javascript:galleryPOP('open', 'type2', "+(i+1)+");\" style=\"background: url('"+galleryPhotos2[i]+"' ) no-repeat center center\" itemprop=\"contentUrl\" data-size=\"800x1200\" class=\"setimgsize\"><img src=\"./images/img_frame.png\" class=\"img_frame\" itemprop=\"thumbnail\" alt=\"\"></a> </figure>"
-		);
+		$('#gallery-square').append(
+			"<div class=\"item\">"
+				+"<div class=\"ph\"></div>"
+				+"<img src=\""+galleryPhotos2[i]+"\" />"
+			+"</div>"
+		); 	
+		$('#gallery-carousel .carousel-inner').append(
+			"<div class=\"carousel-item\">"
+				+"<img src=\""+galleryPhotos2[i]+"\" class=\"d-block w-100\" alt=\"사진\">"
+			+"</div>"
+		)
 	}
 
 	imgGallerySlider = $('#image-gallery').lightSlider({
