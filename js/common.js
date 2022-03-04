@@ -15,15 +15,15 @@ var galleryPhotos1 = [
 ];
 
 var galleryPhotos2 = [
-	"images/photos/03.jpg",
 	"images/photos/06.jpg",
 	"images/photos/07.jpg",
-	"images/photos/09.jpg",
-	"images/photos/14.jpg",
 	"images/photos/15.jpg",
-	"images/photos/17.jpg",
+	"images/photos/14.jpg",
+	"images/photos/03.jpg",
 	"images/photos/19.jpg",
-	"images/photos/20.jpg"
+	"images/photos/09.jpg",
+	"images/photos/20.jpg",
+	"images/photos/17.jpg"
 ]
 
 $(document).on("ready", function(){
@@ -323,7 +323,7 @@ function kakaoShare(){
 		content: {
 		  title: '태호 ♥ 지안 결혼합니다.',
 		  description: '#태호 #지안 #결혼 #행복 #감사',
-		  imageUrl: 'https://kr-taeho.github.io/images/photo3_576x768.png',
+		  imageUrl: 'https://kr-taeho.github.io/images/main.png',
 		  link: {
 			mobileWebUrl: '카카오공유하기 시 클릭 후 이동 경로',
 			webUrl: '카카오공유하기 시 클릭 후 이동 경로',
