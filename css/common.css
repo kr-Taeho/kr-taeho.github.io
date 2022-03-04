@@ -24,7 +24,7 @@ body {
     font-size: 1.3em;
     color: #141518;
     text-align: center!important;
-	overflow: auto;
+	
 }
 
 #menu-overlay{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#000; opacity:.7; z-index:998;}
@@ -265,7 +265,7 @@ body {
 }
 .thanks-section {
 	background: url('../images/photo5_800x1200.png') center no-repeat;
-	background-size: 100%;
+	background-size: 120%;
     padding: 20px;
 	width: 100%;
 	height: 100%;
@@ -516,7 +516,7 @@ body {
 .gallery-section .gallery-square .ph{
 	position:relative;
 	padding-bottom:100%;
-	background:rgba(0,0,0,.02)
+	background:rgba(0,0,0,.02);
 }
 .gallery-section .gallery-square img{
 	position:absolute;
@@ -540,7 +540,7 @@ body {
     width: 96%;
     max-width: 400px;
 	padding: 0;
-	height: 96%;
+	height: 90%;
 }
 .gallery-modal-container {
 	display: flex;
