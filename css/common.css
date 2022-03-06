@@ -19,6 +19,9 @@
         font-size: 32px !important;
     }
 }
+.k-hidden {
+	display: none;
+}
 body { 
     font-family: 'default-font';
     font-size: 1.3em;
@@ -49,7 +52,7 @@ body {
 
 .copyComplete .pop-body{padding:0 0 2.5rem;}
 .copyComplete .form .group{padding:2.5rem 2rem;text-align:center;}
-.copyComplete .form .group .tit{padding:0 2rem 0.5rem;font-size: 1.325rem;color:#111;}
+.copyComplete .form .group .tit{padding:0 2rem 0.5rem;font-size: 1.125rem;color:#111;}
 .copyComplete .form .group .bkinfo{padding:0 2rem;line-height:1.1;}
 .copyComplete .form .group .bkinfo span {font-size: 1.075rem;color:#666;}
 .copyComplete .buttons .btn{display:block; float:left; width:100%; background:#fff; font-size:1.3rem; font-weight:400; line-height:3.125rem; text-align:center; color:#111; border-top:1px solid #eee; border-left:1px solid #eee;text-decoration:none;}

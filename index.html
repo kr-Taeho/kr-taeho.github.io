@@ -170,10 +170,10 @@
 					<div class="col">
 						<div class="honju-tit sl">신랑 측 혼주</div>
 						<div class="box first">
-							<div class="name"><span>어머니</span> <strong>어머님</strong></div>
+							<div class="name"><span>어머니</span> <strong>안정자</strong></div>
 							<div class="honju-btn">
-								<a href="javascript:phoneCall('01064427602');" class="com-btn tel sl">연락하기</a>
-								<a href="javascript:phoneSMS('01064427602');" class="com-btn sms">문자보내기</a>
+								<a href="javascript:phoneCall('01027337602');" class="com-btn tel sl">연락하기</a>
+								<a href="javascript:phoneSMS('01027337602');" class="com-btn sms">문자보내기</a>
 							</div>
 						</div>
 						<div class="box">
@@ -182,17 +182,17 @@
 					<div class="col">
 						<div class="honju-tit sb">신부 측 혼주</div>
 						<div class="box first">
-							<div class="name"><span>아버지</span> <strong>아버님</strong></div>
+							<div class="name"><span>아버지</span> <strong>안창혁</strong></div>
 							<div class="honju-btn">
-								<a href="javascript:phoneCall('01064427602');" class="com-btn tel sb">연락하기</a>
-								<a href="javascript:phoneSMS('01064427602');" class="com-btn sms">문자보내기</a>
+								<a href="javascript:phoneCall('01090306820');" class="com-btn tel sb">연락하기</a>
+								<a href="javascript:phoneSMS('01090306820');" class="com-btn sms">문자보내기</a>
 							</div>
 						</div>
 						<div class="box">
-							<div class="name"><span>어머니</span> <strong>어머님</strong></div>
+							<div class="name"><span>어머니</span> <strong>전순이</strong></div>
 							<div class="honju-btn">
-								<a href="javascript:phoneCall('01064427602');" class="com-btn tel sb">연락하기</a>
-								<a href="javascript:phoneSMS('01064427602');" class="com-btn sms">문자보내기</a>
+								<a href="javascript:phoneCall('01033618026');" class="com-btn tel sb">연락하기</a>
+								<a href="javascript:phoneSMS('01033618026');" class="com-btn sms">문자보내기</a>
 							</div>
 						</div>
 					</div>
@@ -282,22 +282,9 @@
 						</div>
 						<div class="group">
 							<div>
-								<input name="GBankNum1" id="GBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyG')">복사</button>
+								<input name="GBankNum1" id="GBankNum1" class="input" readonly value="3333037600646"><button type="button" class="btn" onclick="jsCopyLink('카카오뱅크', '3333037600646', '김태호', 'accountCopyG')">복사</button>
 							</div>
-						</div>			
-						<div class="group col-2">
-							<div>
-								국민은행
-							</div>
-							<div>
-								<span>예금주 : </span> 안정자
-							</div>
-						</div>
-						<div class="group">
-							<div>
-								<input name="GBankNum2" id="GBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyG')">복사</button>
-							</div>
-						</div>			
+						</div>	
 					</form>
 				</div>
 			</div>
@@ -313,43 +300,30 @@
 					<form action="">
 						<div class="group col-2 first">
 							<div>
-								국민은행
+								하나은행
 							</div>
 							<div>
-								<span>예금주 : </span> 이석훈
+								<span>예금주 : </span> 안지안
 							</div>
 						</div>
 						<div class="group">
 							<div>
-								<input name="BBankNum1" id="BBankNum1" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyB')">복사</button>
+								<input name="BBankNum1" id="BBankNum1" class="input" readonly value="41291032267807"><button type="button" class="btn" onclick="jsCopyLink('하나은행','41291032267807', '안지안', 'accountCopyB')">복사</button>
 							</div>
 						</div>			
 						<div class="group col-2">
 							<div>
-								국민은행
+								우리은행
 							</div>
 							<div>
-								<span>예금주 : </span> 이석훈
+								<span>예금주 : </span> 안창혁 
 							</div>
 						</div>
 						<div class="group">
 							<div>
-								<input name="BBankNum2" id="BBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyB')">복사</button>
-							</div>
-						</div>			
-            <div class="group col-2">
-							<div>
-								국민은행
-							</div>
-							<div>
-								<span>예금주 : </span> 이석훈
+								<input name="BBankNum2" id="BBankNum2" class="input" readonly value="1002768213748"><button type="button" class="btn" onclick="jsCopyLink('우리은행','1002768213748', '안창혁', 'accountCopyB')">복사</button>
 							</div>
 						</div>
-						<div class="group">
-							<div>
-								<input name="BBankNum2" id="BBankNum2" class="input" readonly value="000-123-456789"><button type="button" class="btn" onclick="jsCopyLink('000-123-456789', 'accountCopyB')">복사</button>
-							</div>
-						</div>		
 					</form>
 				</div>
 			</div>
@@ -366,8 +340,8 @@
 						<div class="group">
 							<div>
 								<div class="tit">계좌번호가 복사되었습니다.</div>
-								<div class="bkinfo">
-									<span>국민은행 000-123-456789</span><br><span>예금주 이석훈</span>
+								<div id="bkinfo" class="bkinfo">
+									
 								</div>								
 							</div>
 						</div>
@@ -422,8 +396,17 @@
     }
   }
 
+  function accountVW(){
+	var url = new URL(window.location.href);
+	if(url.searchParams){
+		if(url.searchParams.get('a') == 1){
+			$('.account-section').removeClass('k-hidden');
+		}
+	}
+  }
 
-  
+
+//   accountVW();
   // BGM
   //music_player();
 
@@ -438,7 +421,8 @@
 
   flowerEffect();
 
-  function jsCopyLink(copyText, id) {            
+  function jsCopyLink(bank, copyText, name, id) {            
+	
     var tmpTextarea = document.createElement('textarea');
     tmpTextarea.value = copyText;
    
@@ -448,6 +432,9 @@
    
     document.execCommand('copy');
     document.body.removeChild(tmpTextarea);
+	var tag = "<span>"+bank+" "+copyText+"</span><br><span>예금주 "+name+"</span>";
+	$('#bkinfo').empty();
+	$('#bkinfo').append(tag);
     popClose(id);
     popOpen('0 1rem','copyComplete');			
     //alert("URL 복사가 완료되었습니다."); 					  
